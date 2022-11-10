@@ -1,79 +1,85 @@
-document.getElementById("clear").addEventListener("click", (e)=>{
-  e.preventDefault();
-  let element=document.getElementsByTagName("input");
-  for(let i= 0;i<element.length;i++){
-    element[i].value="";
-  }
+$(document).ready(function(){
+  $("#clear").click(function(e){
+    e.preventDefault();
+    $("#details").trigger("reset");
+  });
 });
 
-function promo(){
-  let val=document.getElementById("state").value;
-  if(val){
-    document.getElementById("promocode").value= val+" - PROMO";
-  }
-  else{
-    document.getElementById("promocode").value="";
-  }
-}
+$(document).ready(function(){
+  $("#state").change(function(){
+    let val=$('#state').val();
+    if(val){
+      $('#promocode').val(val+ " - PROMO");
+    }
+    else{
+      $('#promocode').val("");
+    }
+  });
+});
 
-function genderAlert(msg){
-  alert("Hello "+ msg);
-}
+$(document).ready(function(){
+  $(".gender").click(function(){
+    let val=$("input[type='radio']:checked").val();
+    alert("Hello " + val);
+  });
+});
 
 function validateName(){
-  let name=document.getElementById('name').value;
+  let name=$("#name").val();
   if(name!=""){
-    document.getElementById('nameError').innerHTML="";
+    $('#nameError').text("");
     return true;
   }
   else{
-    document.getElementById('nameError').innerHTML="Name is required";
-    return(false);
+    $('#nameError').text("Name is required");
+    return false;
   }
-}
+};
 
 function validateEmail(){
-  let email=document.getElementById("email").value;
-  const validMail=/^[a-zA-Z0-9.]+@[a-zA-Z0-9-]+.[a-zA-Z0-9.]{2,}$/;
-  if(email.match(validMail) || email==""){
+  let email=$("#email").val();
+  const mail=/^[a-zA-Z0-9.]+@[a-zA-Z0-9-]+.[a-zA-Z0-9.]{2,}$/;
+  if(mail.test(email) || email==""){
     if(email==""){
-      document.getElementById('emailError').innerHTML="Email is required";
+      $('#emailError').text("Email is required");
       return false;
     }
     else{
-      document.getElementById("emailError").innerHTML="";
+      $('#emailError').text("");
       return true;
     }
   }
   else{
-    document.getElementById("emailError").innerHTML="Enter valid Email";
+    $("#emailError").text("Enter Valid Email");
     return false;
   }
 }
 
 function validateOrgName(){
-  let org=document.getElementById("orgName").value;
+  let org=$("#orgName").val();
   if(org!=""){
-    document.getElementById("orgNameError").innerHTML="";
+    $('#orgNameError').text("");
     return true;
   }
   else{
-    document.getElementById("orgNameError").innerHTML="Organisation Name is required";
+    $('#orgNameError').text("Organisation Name is required");
     return false;
   }
-}
+};
 
-document.getElementById("submit").addEventListener("click", (e)=>{
-  e.preventDefault();
-  let name=validateName();
-  let email=validateEmail();
-  let orgname=validateOrgName();
-  if (name && email && orgname){
-    alert("Successfully submitted");
-    document.getElementById("details").reset();
-    document.getElementById("update").innerHTML="";
-  }
-  else{
-    document.getElementById("update").innerHTML="Please fill all the required fileds below";
-  }
+$(document).ready(function(){
+  $("#submit").click(function(e){
+    e.preventDefault();
+    let name=validateName();
+    let email=validateEmail();
+    let orgname=validateOrgName();
+    if (name && email && orgname){
+      alert("Successfully submitted");
+      $("#details").trigger("reset");
+      $("#update").text("");
+    }
+    else{
+      $("#update").text("Please fill all the required fields below");
+    }
+  });
 });

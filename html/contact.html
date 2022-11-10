@@ -4,6 +4,7 @@
 <head>
     <title>Contact</title>
     <link rel="stylesheet" href="../css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/contact.js" defer></script>
 </head>
 
@@ -36,8 +37,8 @@
             </div>
             <div class="item">
                 <div class="cell"><label for="gender">Gender:</label></div>
-                <div class="cell"><input type="radio" name="gender" value="Sir" onclick="genderAlert(this.value)">Male
-                    <input type="radio" name="gender" value="Lady" onclick="genderAlert(this.value)">Female
+                <div class="cell"><input type="radio" name="gender" value="Sir" class="gender">Male
+                    <input type="radio" name="gender" value="Lady" class="gender">Female
                 </div>
             </div>
             <div class="item">
@@ -65,7 +66,7 @@
             </div>
             <div class="item">
                 <div class="cell"><label for="state">My state or Province:</label></div>
-                <div class="cell"><select name="state" id="state" onchange="promo()">
+                <div class="cell"><select name="state" id="state">
                         <option value="">Select State or Province</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                         <option value="Kerala">Kerala</option>
