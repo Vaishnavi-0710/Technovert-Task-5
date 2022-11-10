@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <script src="../js/contact.js" defer></script>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 class="main-heading">
+            TECHNOVERT
+        </h1>
+    </div>
+    <div class="navbar">
+        <div class="navbar-list">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="home.html"><b>HOME</b></a></li>
+                <li class="nav-item"><a><b>SERVICES</b></a></li>
+                <li class="nav-item"><a href="careers.html"><b>CAREERS</b></a></li>
+                <li class="nav-item"><a class="active-page"><b>CONTACT</b></a></li>
+            </ul>
+        </div>
+        <div class="icon"><img src="../images/blog-icon.png" alt="icon not found"></div>
+    </div>
+    <div class="body">
+        <div id="update"></div>
+        <form id="details">
+            <div class="item">
+                <div class="cell"><label for="name">My Name:</label></div>
+                <div class="cell"><input type="text" id="name" name="name" aria-describedby="required-description">
+                    <span aria-hidden="true" class="required">*</span>&nbsp;
+                    <span id="nameError"></span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="gender">Gender:</label></div>
+                <div class="cell"><input type="radio" name="gender" value="Sir" onclick="genderAlert(this.value)">Male
+                    <input type="radio" name="gender" value="Lady" onclick="genderAlert(this.value)">Female
+                </div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="email">My Email Address:</label></div>
+                <div class="cell"><input type="email" id="email" name="email" aria-describedby="required-description">
+                    <span aria-hidden="true" class="required">*</span>&nbsp;
+                    <span id="emailError"></span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="phnno">My Telephone Number:</label></div>
+                <div class="cell"><input type="text" name="phnno"></div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="orgname">My Organization Name:</label></div>
+                <div class="cell"><input type="text" id="orgName" name="orgname"
+                        aria-describedby="required-description">
+                    <span aria-hidden="true" class="required">*</span>&nbsp;
+                    <span id="orgNameError"></span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="city">My City:</label></div>
+                <div class="cell"><input type="text" name="city"></div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="state">My state or Province:</label></div>
+                <div class="cell"><select name="state" id="state" onchange="promo()">
+                        <option value="">Select State or Province</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                    </select></div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="contact">Please Contact Me By:</label></div>
+                <div class="cell"><input type="radio" name="contact">Email
+                    <input type="radio" name="contact">Phone
+                    <input type="radio" name="contact">Both
+                </div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="code">Promotion Code:</label></div>
+                <div class="cell"><input type="text" name="code" id="promocode" readonly></div>
+            </div>
+            <div class="item">
+                <div class="cell"><label>Operational Information</label>
+                    <div>This information is optional but it help us to serve you better.</div>
+                </div>
+
+            </div>
+            <div class="item">
+                <div class="cell"><label for="address">My Website Address is:</label></div>
+                <div class="cell"><input type="text" name="address"></div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="about">Tell Us More About Your Organization:</label>
+                <textarea class="scroll-box" name="about"></textarea></div>
+            </div>
+            <div class="item">
+                <div class="cell"><label for="know">What I'd really like to know is:</label>
+                    <textarea class="scroll-box" name="know"></textarea></div>
+            </div>
+            <div class="item">
+                <div class="cell">
+                    <button class="send-button" id="submit" type="submit">Send Message</button>&nbsp;
+                    <button id="clear" class="clear-button">Clear Form</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

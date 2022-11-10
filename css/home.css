@@ -1,0 +1,110 @@
+body{
+    margin:0;
+    width:100%;
+}
+.heading{
+    background-color: #3399cc;
+    padding:1px;
+}
+.main-heading{
+    font-family: "Century Gothic";
+    font-size: 45px;
+    color:white;
+    font-weight: 100;
+    margin-left: 30px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: #333333;
+    width: 100%;
+}
+.nav-list{
+    font-family:Calibri;
+    list-style-type: none;
+    display:flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+.nav-item{
+    margin-left: 15px;
+}
+.icon{
+    align-items: center;
+    margin-left: auto;
+    padding: 5px;
+    padding-right: 40px;
+    width:25px;
+    height:25px;
+}
+.nav-item a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+.nav-item a:hover{
+    background-color: #FF9900;
+    color:#3A3631;
+    font-weight: bold;
+    border-left: 3px solid white;
+}
+.active-page {
+    background-color: #FF9900;
+    font-weight: bold;
+    border-left: 3px solid white;
+}
+.active-page b{
+    color:#3A3631;
+}
+.body{
+    padding: 30px 0px 0px 55px;
+}
+.news{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C0C0C0;
+    width: 710px;
+    padding: 10px;
+}
+.sub-header{
+    font-family: 'calibri';
+    font-size: 150%;
+    font-weight: 500;
+    margin: 0;
+}
+.news-headlines{
+    font-family: 'Calibri';
+    font-size: 96%;
+    font-weight: 500;
+    color: #333333;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    text-shadow: 0.3px 0.5px grey;
+}
+.news-headlines > li{
+    margin-bottom: 15px;
+}
+.news-headlines > li::before{
+    content: "-";
+    margin-left: 6px;
+    margin-right: 10px;
+}
+.welcome{
+    margin: 33px 0px 20px 0px;
+    width:1040px;
+}
+.welcome > div{
+    font-family: 'Calibri';
+    color: #333333;
+    font-size: 96%;
+    margin: 4px 0px 0px 0px;
+    text-shadow: 0.3px 0.5px grey;
+}

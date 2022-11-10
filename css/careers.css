@@ -1,0 +1,133 @@
+body{
+    margin:0;
+}
+.heading{
+    background-color: #3399cc;
+    padding:1px;
+}
+.main-heading{
+    font-family: "Century Gothic";
+    font-size: 45px;
+    color:white;
+    font-weight: 100;
+    margin-left: 30px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: #333333;
+    width: 100%;
+}
+.nav-list{
+    font-family:Calibri;
+    list-style-type: none;
+    display:flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+.nav-item{
+    margin-left: 15px;
+}
+.icon{
+    align-items: center;
+    margin-left: auto;
+    padding: 5px;
+    padding-right: 40px;
+    width:25px;
+    height:25px;
+}
+.nav-item a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+.nav-item a:hover{
+    background-color: #FF9900;
+    color:#3A3631;
+    font-weight: bold;
+    border-left: 3px solid white;
+}
+.active-page {
+    background-color: #FF9900;
+    font-weight: bold;
+    border-left: 3px solid white;
+}
+.active-page b{
+    color:#3A3631;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.career-heading{
+    font-family: "Century Gothic";
+    color: #323232;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 20px 0px 20px 55px;
+}
+.content{
+    font-family: "Arial";
+    color: #303030;
+    font-size: 16px;
+    font-weight: 100%;
+    width:1000px;
+    margin: 0px 0px 10px 60px;
+}
+#update{
+    display: flex !important;
+    font-family: Arial;
+    font-size: 20px;
+    color: red;
+    margin: 40px 0px 0px 80px;
+}
+form{
+    display: table;
+    margin: 20px 0px 0px 80px;
+    width:600px;
+}
+.item{
+    display: table-row;
+}
+.cell{
+    display: table-cell;
+    padding: 16px;
+    width:400px;
+}
+label{
+    display: table-cell;
+    font-weight: bold;
+    font-family: "Arial";
+    color: #1B1B1B;
+    font-size: 15px;
+    width:150px;
+}
+input{
+    display: table-cell;
+    padding: 5px;
+    border: 1.5px solid #9F9F9F;
+}
+.required{
+    color: red;
+}
+.browse, .submit{
+    font-weight: bold;
+    font-family: "Arial";
+    color: #1B1B1B;
+}
+#nameError, #emailError{
+    color:red;
+}
+.file{
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
