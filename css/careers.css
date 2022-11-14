@@ -47,6 +47,7 @@ body{
     text-align: center;
     padding: 8px;
     text-decoration: none;
+    border-left: 3px solid transparent;
 }
 .nav-item a:hover{
     background-color: #FF9900;
@@ -57,7 +58,7 @@ body{
 .active-page {
     background-color: #FF9900;
     font-weight: bold;
-    border-left: 3px solid white;
+    border-left: 3px solid white !important;
 }
 .active-page b{
     color:#3A3631;
