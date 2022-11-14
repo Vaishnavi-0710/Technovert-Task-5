@@ -3,9 +3,7 @@ $(document).ready(function(){
     e.preventDefault();
     $("#details").trigger("reset");
   });
-});
 
-$(document).ready(function(){
   $("#state").change(function(){
     let val=$('#state').val();
     if(val){
@@ -15,12 +13,25 @@ $(document).ready(function(){
       $('#promocode').val("");
     }
   });
-});
 
-$(document).ready(function(){
   $(".gender").click(function(){
     let val=$("input[type='radio']:checked").val();
     alert("Hello " + val);
+  });
+
+  $("#submit").click(function(e){
+    e.preventDefault();
+    let name=validateName();
+    let email=validateEmail();
+    let orgname=validateOrgName();
+    if (name && email && orgname){
+      alert("Successfully submitted");
+      $("#details").trigger("reset");
+      $("#update").text("");
+    }
+    else{
+      $("#update").text("Please fill all the required fields below");
+    }
   });
 });
 
@@ -66,20 +77,3 @@ function validateOrgName(){
     return false;
   }
 };
-
-$(document).ready(function(){
-  $("#submit").click(function(e){
-    e.preventDefault();
-    let name=validateName();
-    let email=validateEmail();
-    let orgname=validateOrgName();
-    if (name && email && orgname){
-      alert("Successfully submitted");
-      $("#details").trigger("reset");
-      $("#update").text("");
-    }
-    else{
-      $("#update").text("Please fill all the required fields below");
-    }
-  });
-});
